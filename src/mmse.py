@@ -18,10 +18,7 @@ def load_trained_vae(model_path, input_dim=28*28, hidden_dim=360, latent_dim=20)
 def load_data(batch_size):
     testx = np.load("data/testX.npy").astype(np.float32)
     test_loader = DataLoader(TensorDataset(torch.tensor(testx)), batch_size=batch_size, shuffle=False)
-    return test_loader
-
-# 
-import torch
+    return test_loader]
 
 def mask_input(data):
     batch_size, num_pixels = data.shape  # (batch, 28*28)
